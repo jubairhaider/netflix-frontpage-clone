@@ -1,0 +1,373 @@
+:root {
+  --primary-color: #e50914;
+  --dark-color: #141414;
+  --light-color: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #000;
+  color: #fff;
+  --webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+}
+p {
+  margin: 0.5rem 0;
+}
+img {
+  /* height: auto;*/
+  max-width: 100%;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  border: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+}
+.btn:hover {
+  background-color: #e50923;
+}
+.btn-lg {
+  border-radius: 2px;
+  border-left: 1px solid #999;
+  font-size: 1.625rem;
+  padding: 1rem 1.5rem;
+}
+#showcase {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  background: url(https://mys12.com/netflix/img/background.jpg) no-repeat center
+    center/cover;
+}
+#showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  box-shadow: inset 120px 100px 250px #000, inset -120px -100px 250px #000;
+}
+.showcase-top {
+  height: 100px;
+  position: relative;
+  z-index: 2;
+}
+.showcase-top img {
+  position: absolute;
+  width: 8.125rem;
+  height: 2.125rem;
+  margin: 2rem 3rem;
+}
+.showcase-top a {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.showcase-content {
+  margin: 0 auto;
+  max-width: 950px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin-top: 8rem;
+}
+.showcase-content h1 {
+  font-size: 3.125rem;
+  width: 65%;
+}
+.showcase-content h4 {
+  font-size: 1.625rem;
+  margin: 1rem auto;
+  font-weight: 400;
+}
+.showcase-content p {
+  font-size: 1.25rem;
+  margin: 0.7rem 0 0.25rem;
+}
+#form {
+  display: flex;
+  justify-content: center;
+  max-width: 960px;
+  width: 100%;
+  margin: 0.8rem;
+}
+#form input {
+  padding: 1rem;
+  width: 430px;
+
+  font-size: 1rem;
+}
+.section {
+  border-top: 8px solid #222;
+  padding: 70px 45px;
+  position: relative;
+  margin-bottom: 0;
+}
+.section-content {
+  max-width: 1100px;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text-content {
+  width: 52%;
+  text-align: left;
+  margin: auto;
+  height: 100%;
+  padding: 0 3rem 0 0;
+  z-index: 3;
+}
+
+.text-content h1 {
+  font-size: 3.125rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.text-content h3 {
+  font-size: 1.725rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+.img {
+  /*width: 31.25rem;*/
+  /*width: 50%;*/
+  position: relative;
+  overflow: hidden;
+}
+
+.faq {
+  border-top: 8px solid #222;
+
+  margin-bottom: 3.5rem;
+}
+.faq-text {
+  padding-top: 3.5rem;
+  max-width: 960px;
+  width: 100%;
+  margin: auto;
+}
+.lead {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+.faq-text ul {
+  max-width: 815px;
+  margin: 2rem auto;
+}
+.list-item {
+  margin: 0.3rem;
+}
+.faq h1 {
+  font-size: 3.125rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.collapsible {
+  background-color: #303030;
+  color: white;
+  font-size: 1.725rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.8em 2.2em 0.8em 1.2em;
+  border: none;
+  margin: 0.3rem;
+  display: block;
+  cursor: pointer;
+}
+.collapsible::after {
+  content: "+";
+  float: right;
+  font-size: 1.725rem;
+}
+.active::after {
+  content: "x";
+  float: right;
+  font-size: 1.725rem;
+}
+.content {
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.1s ease-out;
+  background-color: #303030;
+  color: white;
+  font-size: 1.625rem;
+  width: 100%;
+  text-align: left;
+  /*padding: 0.8em 2.2em 0.8em 1.2em;*/
+  padding: 1.5rem;
+  margin: 0.3rem;
+}
+.open {
+  display: block;
+  transition: max-height 0.2s ease-in;
+}
+.footer-container {
+  border-top: 8px solid #222;
+  padding: 2rem;
+}
+.footer {
+  max-width: 70%;
+  margin: 1rem auto;
+  overflow: auto;
+}
+
+.footer,
+.footer a {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.footer li {
+  line-height: 2.9;
+}
+
+.footer .lang-select {
+  margin-top: 2rem;
+  color: #999;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #333;
+  padding: 1rem 1.2rem;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 950px) {
+  .showcase {
+    padding: 70px 45px;
+  }
+  .showcase-content {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    padding: 75px 0;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.25rem;
+    display: flex;
+  }
+  .showcase-content p {
+    width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+  }
+  #form {
+    display: flex;
+    flex-direction: column;
+  }
+  .email-form {
+    width: 100%;
+    margin: auto;
+  }
+  #form a {
+    margin: 1rem auto;
+    font-size: 1rem;
+  }
+  .section-content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .text-content {
+    width: 100%;
+    text-align: center;
+  }
+  .text-content h1 {
+    font-size: 2.5rem;
+  }
+  .text-content h3 {
+    font-size: 1.25rem;
+    width: 100%;
+  }
+  .section-2 {
+    flex-direction: column-reverse;
+  }
+  .faq-text h1 {
+    font-size: 2.5rem;
+  }
+  .faq-list {
+    width: 90%;
+  }
+  .content p {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 950px) {
+  #showcase {
+    height: 80vh;
+  }
+  .showcase-content h1 {
+    font-size: 1.75rem;
+  }
+  .showcase-content h4 {
+    font-size: 1.125rem;
+    margin: 1rem auto;
+  }
+  .showcase-content p {
+    font-size: 18px;
+  }
+  .text-content h1 {
+    font-size: 1.625rem;
+  }
+  .text-content h3 {
+    font-size: 1.125rem;
+  }
+  .faq-list {
+    width: 100%;
+  }
+  .faq-text h1 {
+    font-size: 1.625rem;
+  }
+  .collapsible {
+    font-size: 1.25rem;
+  }
+  .content p {
+    font-size: 1.25rem;
+  }
+}
